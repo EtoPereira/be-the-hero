@@ -1,10 +1,11 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 export default StyleSheet.create({
     container: {
-        flex:1,
+        flex: 1,
         paddingHorizontal: 24,
+        paddingTop: Constants.statusBarHeight + 20,
 
     },
 
@@ -22,11 +23,43 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: 30,
-        marginBotton: 16,
-        marginTop:48,
+        marginBottom: 16,
+        marginTop: 48,
         color: '#13131a',
-        lineHeight: 24,
+        lineHeight: 34,
         color: '#737380'
-    }
+    },
+
+    incidentList: {
+        marginTop: 32,
+    },
+    incident: {
+        padding: 24,
+        borderRadius: 8,
+        backgroundColor: '#FFF',
+        marginBottom: 16,
+    },
+    incidentProperty: {
+        fontSize: 17,
+        color: '#41414d',
+        fontWeight: 'bold',
+    },
+    incidentValue: {
+        marginTop:8,
+        fontSize: 16,
+        marginBottom: 24,
+        color: '#737380',
+    },
+    detailsButton: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems:'center',
+    },
+    detailButtonText: {
+        color: '#e02041',
+        fontSize: 15,
+        fontWeight: 'bold'
+    },
+
 
 });
