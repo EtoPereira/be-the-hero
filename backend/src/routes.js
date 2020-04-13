@@ -34,11 +34,13 @@ routes.delete('/incidents/:id', celebrate({
     }) 
 }), incidentController.delete);
 
-routes.get('/profile', celebrate({
-    [Segments.HEADERS]: Joi.object({
-        Authorization: Joi.string().required(),
-    }).unknown(),
-}), profileController.index);
+routes.get('/profile', profileController.index);
+
+// routes.get('/profile', celebrate({
+//     [Segments.HEADERS]: Joi.object({
+//         Authorization: Joi.string().required(),
+//     }).unknown(),
+// }), profileController.index);
 
 
 module.exports = routes;

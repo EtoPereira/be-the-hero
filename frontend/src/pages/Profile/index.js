@@ -13,6 +13,8 @@ export default function Profile() {
     const ongName = localStorage.getItem('ongName');
     const history = useHistory();
     
+    console.log(incidents);
+    
     useEffect(()=> {
         api.get('profile', {headers: {
             Authorization: ongId,
@@ -51,7 +53,7 @@ export default function Profile() {
             </header>
              <h1>Casos Cadastrados</h1>
             <ul>
-                {incidents.map(incident=>(
+                {incidents.map(incident=>(                
                 <li key={incident.id}>
                     <strong>Caso</strong>
                     <p>{incident.title}</p>

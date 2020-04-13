@@ -13,7 +13,7 @@ module.exports = {
         .select([
             'incidents.*', 
             'ongs.email', 
-            'ongs.email', 
+            // 'ongs.email', 
             'ongs.whatsapp', 
             'ongs.city', 
             'ongs.uf'
@@ -51,8 +51,5 @@ module.exports = {
         await connection('incidents').where('id', id).delete();
 
         return response.status(204).send();
-
-
-
     }
 };
